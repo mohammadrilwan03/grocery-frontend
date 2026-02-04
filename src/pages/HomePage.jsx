@@ -5,6 +5,11 @@ import ShopSection from '../components/ShopSection';
 import ContactSection from '../components/ContactSection';
 import { motion } from 'framer-motion';
 
+
+
+
+
+
 const HomePage = ({ addToCart, searchQuery }) => {
     return (
         <motion.main
@@ -27,6 +32,8 @@ const HomePage = ({ addToCart, searchQuery }) => {
                         <h2 className="text-gradient">Get 20% Discount on your first order</h2>
                         <p style={{ marginBottom: '40px', opacity: 0.8, fontSize: '18px' }}>
                             Join the FreshMarket community and get exclusive offers delivered to your inbox every week.
+                                                        Join the FreshMarket community and get exclusive offers delivered to your inbox every week.
+
                         </p>
                         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                             <input

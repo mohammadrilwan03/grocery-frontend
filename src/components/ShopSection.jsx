@@ -11,7 +11,7 @@ const ShopSection = ({ addToCart, onView, searchQuery }) => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:5000/api/products');
+                const response = await fetch('https://grocery-backend-41lt.onrender.com/api/products');
                 const data = await response.json();
                 setProducts(data.length > 0 ? data : localProducts);
                 setLoading(false);

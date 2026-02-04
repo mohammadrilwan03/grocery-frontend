@@ -14,7 +14,7 @@ const ProductPage = ({ addToCart }) => {
         const fetchProduct = async () => {
             try {
                 // In a real app, you'd fetch by ID. Here we'll fetch all and find the one.
-                const response = await fetch('http://127.0.0.1:5000/api/products');
+                const response = await fetch('https://grocery-backend-41lt.onrender.com/api/products');
                 const data = await response.json();
                 const found = data.find(p => (p._id || p.id).toString() === id);
                 setProduct(found);

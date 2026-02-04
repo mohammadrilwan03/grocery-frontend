@@ -16,7 +16,7 @@ const OrderHistoryModal = ({ isOpen, onClose, userId }) => {
     const fetchOrders = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/orders/${userId}`);
+            const response = await fetch(`https://grocery-backend-41lt.onrender.com/api/orders/${userId}`);
             const data = await response.json();
             setOrders(data);
         } catch (error) {

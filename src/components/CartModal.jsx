@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Trash2, ShoppingBag, CreditCard, MapPin, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
-const API_URL = process.env.REACT_APP_API_URL;
-
+ 
 const CartModal = ({ isOpen, onClose, cartItems, onRemove, user, clearCart }) => {
     const [step, setStep] = useState(1); // 1: Cart, 2: Shipping, 3: Success
     const [shippingData, setShippingData] = useState({
@@ -33,11 +32,12 @@ const CartModal = ({ isOpen, onClose, cartItems, onRemove, user, clearCart }) =>
         };
 
         try {
-           const response = await fetch(`${API_URL}/api/orders`, {
+           const response = await fetch(`https://grocery-backend-41lt.onrender.com/api/orders`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(orderData),
 });
+
             const data = await response.json();
 
             if (response.ok) {
